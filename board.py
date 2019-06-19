@@ -1,4 +1,5 @@
 import random
+from Tiles import WaterTile, LightTile, EventTile
 
 
 class Board:
