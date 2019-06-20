@@ -1,3 +1,3 @@
-from .poplar import *
-from .tree import *
-from .spruce import *
+from .tree import Tree
+from .poplar import Poplar
+from .spruce import Spruce
