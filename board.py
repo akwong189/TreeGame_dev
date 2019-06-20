@@ -1,7 +1,5 @@
 import random
-from water_tile import WaterTile
-from light_tile import LightTile
-from event_tile import EventTile
+from Tiles import WaterTile, LightTile, EventTile
 
 
 class Board:
