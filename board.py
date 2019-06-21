@@ -6,7 +6,7 @@ class Board:
 
     def __init__(self):
         self.board = []
-        for i in range(100):
+        for i in range(48):
             x = random.randint(0, 100)
             if x < 45:
                 self.board.append(WaterTile())

@@ -5,7 +5,7 @@ class WaterTile(Tile):
 
     def __init__(self):
         Tile()
-        self.color = 'Blue'
+        self.color = (0, 0, 255)
 
     def event(self, player):
         # Change water
