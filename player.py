@@ -3,17 +3,26 @@ import random
 
 class Player:
 
-    def __init__(self, tree_type, position=0):
-        self.speed = tree_type.get_max_movement
-        self.health = tree_type.get_max_health
-        self.position = position
+    def __init__(self, tree_type):
+        self.speed = tree_type.get_max_movement()
+        self.max_health = tree_type.get_max_health()
+        self.curr_health = self.max_health
+        self.water = tree_type.get_init_water()
+        self.light = tree_type.get_init_light()
+        self.turn_count = 0
+        self.position = 0
 
-    def set_health(self):
-        self.health = self.water + self.light  # TO-DO update the formula for health later
+    def update_health(self):
+        regen_val = (self.water + self.light) % self.max_health
+        if self.curr_health + regen_val < self.max_health:
+            self.curr_health += regen_val
 
     def roll_die(self, max_speed):
         self.position += random.randint(max_speed + 1)
-        #     self.water -= 1
-        #     self.light -= 1
-        # elif self.water >
-        # if (self.health > 0)
+        self.turn_count += 1
+
+    def get_position(self):
+        return self.position
+
+    def get_turn_count(self):
+        return self.turn_count
