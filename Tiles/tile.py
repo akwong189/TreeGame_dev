@@ -1,4 +1,4 @@
-class Tile():
+class Tile:
     multipliers = {'Spring': 2, 'Summer': -1, 'Fall': 1, 'Winter': 0}
 
     def __init__(self):
