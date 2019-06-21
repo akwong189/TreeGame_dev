@@ -1,0 +1,5 @@
+"""Base Tree Constants"""
+BASE_MOVEMENT = 6
+BASE_HEALTH = 10
+BASE_WATER = 10
+BASE_LIGHT = 10

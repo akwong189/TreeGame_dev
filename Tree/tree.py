@@ -1,3 +1,4 @@
+import tree_constants as constants
 class Tree():
     
     def __init__(self):
@@ -7,10 +8,10 @@ class Tree():
         Init water level of 10
         Init light level of 10
         """
-        self.max_movement = 6
-        self.max_health = 10 
-        self.init_water = 10
-        self.init_light = 10
+        self.max_movement = constants.BASE_MOVEMENT
+        self.max_health = constants.BASE_HEALTH
+        self.init_water = constants.BASE_WATER
+        self.init_light = constants.BASE_LIGHT
 
     def get_max_movement(self):
         """Get max movement"""
