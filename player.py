@@ -15,7 +15,7 @@ class Player:
     def update_health(self):
         regen_val = (self.water + self.light) % self.max_health
         if self.curr_health + regen_val < self.max_health:
-            self.curr_health += self.curr_health + regen_val
+            self.curr_health += regen_val
 
     def roll_die(self, max_speed):
         self.position += random.randint(max_speed + 1)
