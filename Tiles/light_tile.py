@@ -5,8 +5,8 @@ import random
 class LightTile(Tile):
 
     def __init__(self):
-        super(LightTile, self).__init__()
-        self.color = 'Yellow'
+        Tile()
+        self.color = (255, 255, 0)
         self.add_light = random.randint(1, 3)
 
     def event(self, player):

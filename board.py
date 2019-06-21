@@ -13,8 +13,8 @@ class Board:
         self.season_num = 0
 
         self.board = []
-        for i in range(50):
-            x = random.randint(0, 99)
+        for i in range(48):
+            x = random.randint(0, 100)
             if x < 45:
                 self.board.append(WaterTile())
             elif 45 <= x < 90:
