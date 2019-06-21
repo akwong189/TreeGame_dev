@@ -4,11 +4,11 @@ import random
 class Player:
 
     def __init__(self, tree_type):
-        self.speed = tree_type.get_max_movement
-        self.max_health = tree_type.get_max_health
+        self.speed = tree_type.get_max_movement()
+        self.max_health = tree_type.get_max_health()
         self.curr_health = self.max_health
-        self.water = tree_type.get_init_water
-        self.light = tree_type.get_init_light
+        self.water = tree_type.get_init_water()
+        self.light = tree_type.get_init_light()
         self.turn_count = 0
         self.position = 0
 
