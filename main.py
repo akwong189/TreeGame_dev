@@ -1,19 +1,39 @@
 import sys, pygame
+from pygame.locals import *
 from board import Board
 
-pygame.init()
+def main():
+    x = 0
+    y = 0
+    WHITE = (255, 255, 255)
+    BLACK = (0, 0, 0)
+    pygame.init()
+    screen = pygame.display.set_mode((960, 960))
+    players = {}
+    board = Board(players)
 
-screen = pygame.display.set_mode((960, 960))
-print("hi")
-
-if __name__ == '__main__':
-    board = Board()
+    screen.fill(WHITE)
+    for index, tile in enumerate(board.board):
+        print("drawing board")
+        pygame.draw.rect(screen, tile.color, (x, y, 50, 50))
+        if index < 12:
+            x += 50
+        elif index < 23:
+            y += 50
+        elif index < 35:
+            x -= 50
+        else:
+            y -= 50
+    
     while 1:
         for event in pygame.event.get():
-            if event.type == pygame.QUIT: sys.exit()
+            if event.type == QUIT:
+                pygame.quit()
+                sys.exit()
+        pygame.display.update()        
 
-        for tile in board.board:
-            pygame.draw.rect(screen, (20,20,20), )
+if __name__ == '__main__':
+    main()
 
 
 

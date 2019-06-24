@@ -8,7 +8,7 @@ class EventTile(Tile):
 
     def __init__(self):
         super(EventTile, self).__init__()
-        self.color = 'Green'
+        self.color = (0, 255, 0)
 
     def pick_event(self, player):
         s = EventTile.events[self.season]
